@@ -1,0 +1,26 @@
+﻿<Page x:Class="WPFprojekatSIMS.Stranice.PitanjaOdgovori"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFprojekatSIMS.Stranice"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PitanjaOdgovori">
+
+    <Grid Background="White">
+        <DataGrid x:Name="data_grid_komentari"  AutoGenerateColumns="False" HorizontalAlignment="Left" ItemsSource="{Binding}" Height="264" Margin="90,105,0,0" VerticalAlignment="Top" Width="429">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Komentar" Width="350" Binding="{Binding komentar}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Korisnik " Binding="{Binding korisnik}" Width="*"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Ovde mozete videti misljenja drugih korisnika,a ostaviti i svoj komentar:" HorizontalAlignment="Left" Margin="210,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ostavite svoj komentar" HorizontalAlignment="Left" Margin="595,146,0,0" VerticalAlignment="Top" Height="39" Width="146"/>
+        <TextBox x:Name="uneti_komentar_textbox" HorizontalAlignment="Left" Height="45" Margin="595,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
+        <Button Content="Ostavi komentar" HorizontalAlignment="Left" Margin="618,262,0,0" VerticalAlignment="Top" Width="111" Height="30" Click="ostavi_komentar_button_click"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="645,65,0,0" VerticalAlignment="Top" Width="110" Height="33" Click="nazad_button_click"/>
+
+    </Grid>
+</Page>
